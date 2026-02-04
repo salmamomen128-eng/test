@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Registration </title>
+    <style>
+        .pass,
+        .validName {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .photos {
+            display: flex;
+            gap: 20px;
+        }
+
+        .photos img {
+            width: 250px;
+            height: 150px;
+            object-fit: cover;
+            cursor: pointer;
+            opacity: 1;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Registration Page</h1>
+    <form method="get" action="Thankyou.html" onsubmit="return checkPassword()">
+        <!-- <label for="id">user ID</label> -->
+        <input id="id" type="text" name="userID" hidden>
+        <br>
+        <label for="fn">Full Name</label>
+        <div class="validName">
+            <input type="text" name="Fname" id="fn" accesskey="n" required placeholder="Enter your Name:">
+            <!-- invalid name -->
+            <img width="30px" style=" display:none;" id="nameError" src="pic/non validation.png"
+                alt="non validation password">
+            <!-- valid name -->
+
+            <img width="30px" id="nameValid" style=" display:none;" src="pic/download.png" alt="validation password">
+
+            <!-- <span id="nameError" style="color:red; display:none;">
+            invalid name
+        </span> -->
+        </div>
+        <br>
+        <!-- <label for="ln"> Last Name</label>
+        <input type="text" name="lname" id="ln" tabindex="1" required> -->
+        <br>
+        <label for="em"> Email</label>
+        <input type="email" name="Email" id="em" required>
+        <br>
+
+        <label for="pass">Password</label>
+        <input type="password" name="pass" id="pass" required>
+        <br>
+        <div class="pass">
+            <label for="rpass"> repeat password</label>
+
+            <input type="password" name="rpass" id="rpass" required>
+            <!-- invalid password -->
+            <img width="30px" style=" display:none;" id="passError" src="pic/non validation.png"
+                alt="non validation password">
+            <!-- valid password -->
+
+            <img width="30px" id="passValid" style=" display:none;" src="pic/download.png" alt="validation password">
+
+        </div>
+        <br>
+        <label for="city">City</label>
+
+        <select id="city" name="city">
+            <option value="min">Minia</option>
+            <option value="cairo">cairo</option>
+            <option value="alex"> Alexandria</option>
+            <option value="BS"> Bani Suef</option>
+
+        </select>
+        <br>
+        <label for="bdate"> Birth Date </label>
+        <input type="date" name="date" id="bdate">
+        <!--  -->
+        <br>
+        <label for="upic"> User Pictur e</label>
+        <input type="file" name="userPic" id="upic">
+        <br>
+        <fieldset>
+            <legend>Gender</legend>
+
+
+            <input type="radio" id="f" name="gender" value="female">
+            <label for="f">female</label>
+            <br>
+            <input type="radio" id="m" name="gender" value="male">
+            <label for="m">Male</label>
+        </fieldset>
+        <br>
+        <label for="fa">Faculty</label>
+        <select id="fa">
+            <option value="Eng">Engineering</option>
+            <option value="med">Medicine</option>
+            <option value="sc"> Science</option>
+            <option value="cs"> Computer Science</option>
+
+        </select>
+        <br>
+        <br>
+
+        <br>
+        <fieldset>
+            <legend>Interests</legend>
+
+            <input id="PR" type="checkbox" value="prog">
+            <label for="PR">Programming</label>
+            <br>
+            <input id="sw" type="checkbox" value="swimming">
+            <label for="sw">swimming</label>
+            <br>
+            <input id="RE" type="checkbox" value="reading">
+            <label for="RE">reading</label>
+        </fieldset>
+        <label for="ab">About Me</label>
+        <br>
+
+        <textarea style="width: 500;"></textarea>
+        <br>
+        <input type="checkbox" required>
+        <label><a href="contact.html" target="_blank">I agreed to terms and condition </a></label>
+        <br>
+        <button type="submit">Register</button>
+        <input type="reset">
+    </form>
+    <div id="gallery" onmouseover="play()" onmouseout="stop()" style="width: 50vh;">
+
+        <img id="photo" src="pic/images1.jfif">
+
+    </div>
+    <div id="buttons">
+        <button onclick="prev()">Previous</button>
+        <button onclick="play()">Play</button>
+        <button onclick="stop()">Stop</button>
+        <button onclick="next()">Next</button>
+
+    </div>
+    <div id="photos" class="gallery">
+        <img src="pic/images1.jfif" alt="Image 1">
+        <img src="pic/images2.jfif" alt="Image 2">
+        <img src="pic/download3.jfif" alt="Image 3">
+
+    </div>
+    <div id="myDiv" style="border:1px solid black; padding:20px;">
+        <p>Existing paragraph inside div.</p>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="registration.js"></script>
+</body>
+
+
+
+</html>
